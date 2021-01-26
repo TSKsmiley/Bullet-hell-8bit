@@ -25,7 +25,8 @@ public class PlayerMovement : MonoBehaviour
     {
         newPos = rb.position + movement * (moveSpeed * Time.fixedDeltaTime);
 
-        if (newPos.x > borderTop.x || newPos.y > borderTop.y) return; //TODO: tilføj bund kant
+        if (newPos.x < borderTop.x || newPos.x > borderBottom.x) newPos.x = rb.position.x; //TODO: tilføj bund kant
+        if (newPos.y > borderTop.y || newPos.y < borderBottom.y) newPos.y = rb.position.y;
             
         rb.MovePosition(newPos);
     }
