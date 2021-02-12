@@ -13,7 +13,7 @@ public class PlayerShooting : MonoBehaviour
     {
         var bulletClone = Instantiate(bullet, bulletSpawnPos.position, transform.rotation);
         bulletClone.GetComponent<Rigidbody2D>().velocity = transform.up * bulletSpeed;
-        Destroy(bulletClone, 2f);
+        Destroy(bulletClone, .5f);
     }
  
     void Update () 

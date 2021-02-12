@@ -7,8 +7,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
     public Rigidbody2D rb;
-    public Vector2 borderTop;
-    public Vector2 borderBottom;
+    public Transform borderTop;
+    public Transform borderBottom;
 
     private Vector2 movement;
     private Vector2 newPos;
@@ -25,8 +25,8 @@ public class PlayerMovement : MonoBehaviour
     {
         newPos = rb.position + movement * (moveSpeed * Time.fixedDeltaTime);
 
-        if (newPos.x < borderTop.x || newPos.x > borderBottom.x) newPos.x = rb.position.x; //TODO: tilføj bund kant
-        if (newPos.y > borderTop.y || newPos.y < borderBottom.y) newPos.y = rb.position.y;
+        if (newPos.x < borderTop.position.x || newPos.x > borderBottom.position.x) newPos.x = rb.position.x;
+        if (newPos.y > borderTop.position.y || newPos.y < borderBottom.position.y) newPos.y = rb.position.y;
             
         rb.MovePosition(newPos);
     }

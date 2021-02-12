@@ -21,6 +21,8 @@
         <e p="Scripts" t="Include">
           <e p="BulletDestroyer.cs" t="Include" />
           <e p="EnemyController.cs" t="Include" />
+          <e p="MoveBG.cs" t="Include" />
+          <e p="PlayerHealth.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="PlayerShooting.cs" t="Include" />
         </e>
